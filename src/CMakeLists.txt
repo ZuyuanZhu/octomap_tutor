@@ -26,4 +26,3 @@ ADD_EXECUTABLE( joinmap joinMap.cpp )
 TARGET_LINK_LIBRARIES( joinmap
     ${OCTOMAP_LIBRARIES}
     ${OpenCV_LIBS})
-
