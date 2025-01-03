@@ -92,4 +92,19 @@ If you have built or installed the `octovis` tool from OctoMap, you can visualiz
   ~/octomap_ws/src/octomap/bin/octovis ~/octomap_ws/src/octomap_tutor/data/sample.ot
   ```
 
+## Tutorial: Converting and Visualizing a Color OctoMap
+
+In the [pcd2colorOctomap](src/pcd2colorOctomap.cpp) code, we switch from using `OcTree` to `ColorOcTree` and call `integrateNodeColor` to blend colors into the map. This produces a colorized `.ot` file. Run:
+
+```bash
+bin/pcd2colorOctomap data/sample.pcd data/sample.ot
+```
+
+Then visualize the generated `.ot` file with `octovis`. If you are in the OctoMap build directory:
+
+```bash
+cd ~/octomap_ws/src/octomap
+./bin/octovis ../octomap_tutor/data/sample.ot
+```
+
 That’s it! You should now be able to build and run the OctoMap tutorial examples. If you run into any issues, make sure you have the correct paths to OctoMap’s libraries and headers, and that all dependencies are installed properly.
